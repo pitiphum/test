@@ -24,8 +24,8 @@ classNames = {0: 'background',
 class Detector:
     def __init__(self):
         global cvNet
-        cvNet = cv.dnn.readNetFromTensorflow('model/frozen_inference_graph.pb',
-                                             'model/ssd_mobilenet_v1_coco_2017_11_17.pbtxt')
+        cvNet = cv.dnn.readNetFromTensorflow('model/frozen_inference_graph_for_roadsurface.pb',
+                                             'model/faster_rcnn_inception_v2_coco_2018_01_28.pbtxt')
 
     def detectObject(self, imName):
         img = cv.cvtColor(numpy.array(imName), cv.COLOR_BGR2RGB)
